@@ -1,6 +1,6 @@
 {
 	"name": "picobus",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Tiniest message bus possible, type-safe",
 	"main": "index.js",
 	"types": "index.d.ts",
@@ -27,7 +27,13 @@
 		"bus",
 		"pubsub",
 		"emit",
-		"event"
+		"event",
+		"small",
+		"tiny",
+		"type-safe",
+		"type safe",
+		"typesafe",
+		"typescript"
 	],
 	"author": "rasenplanscher",
 	"license": "MIT",
