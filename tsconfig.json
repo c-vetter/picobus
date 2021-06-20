@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"declaration": true,
+		"removeComments": true,
+		"lib": [ "ESNext" ],
+		"module": "ESNext",
+		"target": "ESNext"
+	},
+	"include": [
+		"index.ts"
+	]
+}

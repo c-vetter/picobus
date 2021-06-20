@@ -1,0 +1,38 @@
+{
+	"name": "picobus",
+	"version": "1.0.0",
+	"description": "Tiniest message bus possible, type-safe",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"type": "module",
+	"scripts": {
+		"postinstall": "replace-in-files --string='    ' --replacement='\\t' node_modules/typescript/lib/*.js",
+		"start": "tsc"
+	},
+	"devDependencies": {
+		"ava": "^3.15.0",
+		"replace-in-files-cli": "^1.0.0",
+		"typescript": "^4.3.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rasenplanscher/picobus.git"
+	},
+	"keywords": [
+		"message",
+		"bus",
+		"pubsub",
+		"emit",
+		"event"
+	],
+	"author": "rasenplanscher",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rasenplanscher/picobus/issues"
+	},
+	"homepage": "https://github.com/rasenplanscher/picobus#readme"
+}
