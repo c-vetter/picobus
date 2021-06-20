@@ -1,6 +1,6 @@
 {
 	"name": "picobus",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Tiniest message bus possible, type-safe",
 	"main": "index.js",
 	"types": "index.d.ts",
@@ -10,7 +10,7 @@
 	],
 	"type": "module",
 	"scripts": {
-		"postinstall": "replace-in-files --string='    ' --replacement='\\t' node_modules/typescript/lib/*.js",
+		"prestart": "replace-in-files --string='    ' --replacement='\\t' node_modules/typescript/lib/*.js",
 		"start": "tsc"
 	},
 	"devDependencies": {
