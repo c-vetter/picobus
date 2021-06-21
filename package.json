@@ -1,6 +1,6 @@
 {
 	"name": "picobus",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Tiniest message bus possible, type-safe",
 	"main": "index.js",
 	"types": "index.d.ts",

@@ -1,10 +1,10 @@
-type Picolistener<P> = (
+export type Picolistener<P> = (
 	[P] extends [undefined]
 	? () => void
 	: (payload : P) => void
 )
 
-type Picobus<P> = {
+export type Picobus<P> = {
 	dispatch: Picolistener<P>
 	listen: (listener : Picolistener<P>) => void
 	unlisten: (listener : Picolistener<P>) => void
