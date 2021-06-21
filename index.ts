@@ -1,5 +1,5 @@
 type Picolistener<P> = (
-	P extends undefined
+	[P] extends [undefined]
 	? () => void
 	: (payload : P) => void
 )
