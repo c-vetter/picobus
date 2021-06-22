@@ -1,8 +1,9 @@
 {
 	"name": "picobus",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Tiniest message bus possible, type-safe",
 	"type": "module",
+	"main": "./index.cjs",
 	"exports": {
 		"import": "./index.js",
 		"require": "./index.cjs"
