@@ -1,17 +1,21 @@
 {
 	"name": "picobus",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Tiniest message bus possible, type-safe",
-	"main": "index.js",
+	"type": "module",
+	"exports": {
+		"import": "./index.js",
+		"require": "./index.cjs"
+	},
 	"types": "index.d.ts",
 	"files": [
 		"index.js",
+		"index.cjs",
 		"index.d.ts"
 	],
-	"type": "module",
 	"scripts": {
 		"prestart": "replace-in-files --string='    ' --replacement='\\t' node_modules/typescript/lib/*.js",
-		"start": "tsc"
+		"start": "tsc --build tsconfig.json tsconfig.cjs.json && mv -Force node_modules/.tmp/cjs/index.js ./index.cjs"
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
