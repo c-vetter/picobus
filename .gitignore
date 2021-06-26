@@ -1,6 +1,5 @@
 # build artifacts
 *.js
-*.cjs
 *.d.ts
 
 
