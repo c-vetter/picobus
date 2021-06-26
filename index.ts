@@ -1,18 +1,20 @@
-export type Picolistener<P> = (
-	[P] extends [undefined]
+export type Picolistener<P = never> = (
+	[P] extends [never]
 	? () => void
 	: [undefined] extends [P]
 	? (payload? : P) => void
 	: (payload : P) => void
 )
 
-export type Picobus<P> = {
-	dispatch: Picolistener<P>
+export type Picodispatch<P = never> = Picolistener<P>
+
+export type Picobus<P = never> = {
+	dispatch: Picodispatch<P>
 	listen: (listener : Picolistener<P>) => void
 	unlisten: (listener : Picolistener<P>) => void
 }
 
-export default function picobus<P = undefined>() : Picobus<P> {
+export default function picobus<P = never>() : Picobus<P> {
 	const listeners = new Set<Picolistener<P>>()
 
 	const dispatch = (
